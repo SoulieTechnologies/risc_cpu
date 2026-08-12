@@ -15,6 +15,9 @@ module tb_alu;
     );
 
     initial begin
+
+        $dumpfile("sim/alu.vcd");
+        $dumpvars(0, tb_alu);
         // TEST 1: ADD
 
         a = 32'h5; b = 32'h3; alu_op = 4'b0000; #10;
